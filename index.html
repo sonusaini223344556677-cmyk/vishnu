@@ -2,84 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Premium Betting | Expert Management</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '889397113915456');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=889397113915456&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Betting Exchange | Direct Access</title>
+    
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', '1234567890'); // <-- Yaha apni Pixel ID Dalein
+    fbq('track', 'PageView');
+    </script>
 </head>
-<body>
+<body style="background-color: #0a0a0a; color: white; font-family: sans-serif; text-align: center; padding: 50px 20px;">
 
-    <div class="ticker-wrap">
-        <div class="ticker-text">
-            🚀 User_771 withdrew ₹56,000 • ✅ User_204 withdrew ₹1,12,000 • 💸 User_909 withdrew ₹22,500 • ⚡ NO LOSS STRATEGY ACTIVE
-        </div>
+    <div style="margin-bottom: 30px;">
+        <img src="logo.png" style="width: 200px; filter: drop-shadow(0 0 10px #D4AF37);" alt="Logo">
     </div>
 
-    <div class="main-container">
-        <div class="logo-wrapper">
-            <img src="logo.png" alt="Premium Betting Logo" class="main-logo">
-        </div>
+    <h1 style="color: #D4AF37; font-size: 2rem;">REDIRECTING TO WHATSAPP...</h1>
+    <p style="color: #888;">Please wait while we connect you to our Expert Panel.</p>
 
-        <h1 class="hero-title">EXPONENTIAL <span class="gold-text">GROWTH</span></h1>
-        <p class="sub-text">Expert Play. Managed Risk. Shared Success.</p>
+    <div class="loader" style="margin: 40px auto; border: 4px solid #333; border-top: 4px solid #25D366; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;"></div>
 
-        <div class="premium-card">
-            <h3 class="card-header">PROFIT CALCULATOR (50/50)</h3>
-            
-            <div class="input-section">
-                <label>Investment Amount (₹)</label>
-                <input type="number" id="investAmount" class="profit-input" value="10000" oninput="updateProfit()" pattern="\d*">
-            </div>
+    <button onclick="redirectToWhatsApp()" style="background-color: #25D366; color: white; border: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; font-size: 1.1rem; cursor: pointer;">
+        CLICK HERE IF NOT REDIRECTED
+    </button>
 
-            <div class="results-grid">
-                <div class="result-box">
-                    <span class="label">EXPECTED RETURN</span>
-                    <div id="totalReturn" class="green-text">₹20,000</div>
-                </div>
-                <div class="result-box">
-                    <span class="label">YOUR 50% SHARE</span>
-                    <div id="userProfit" class="gold-glow-text">₹10,000</div>
-                </div>
-            </div>
-
-            <a href="https://wa.me/919549255832?text=I%20am%20ready%20to%20join" class="cta-button">
-                <i class="fab fa-whatsapp"></i> JOIN VIA WHATSAPP
-            </a>
-            
-            <p class="footer-note">By joining, you agree to share 50% of generated profit.</p>
-        </div>
-    </div>
-
-    <a href="https://wa.me/919549255832?text=I%20am%20ready%20to%20join" class="floating-wa">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <style>
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
 
     <script>
-        function updateProfit() {
-            const amount = document.getElementById('investAmount').value;
-            if(amount < 0) return;
-            const total = amount * 2; 
-            const share = total / 2;
-            document.getElementById('totalReturn').innerText = '₹' + total.toLocaleString('en-IN');
-            document.getElementById('userProfit').innerText = '₹' + share.toLocaleString('en-IN');
+        const waLink = "https://wa.me/919549255832?text=I%20am%20ready%20to%20join";
+
+        function redirectToWhatsApp() {
+            // Facebook Pixel ko 'Lead' event bhej raha hai
+            fbq('track', 'Lead'); 
+            fbq('track', 'Subscribe');
+            
+            // Redirect to WhatsApp
+            window.location.href = waLink;
         }
+
+        // Auto redirect after 3 seconds
+        setTimeout(() => {
+            redirectToWhatsApp();
+        }, 3000);
     </script>
+
 </body>
 </html>
