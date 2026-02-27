@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Betting | 50-50 Profit Share</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Premium Betting | Expert Management</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Meta Pixel Code -->
+        <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -28,46 +28,44 @@ src="https://www.facebook.com/tr?id=889397113915456&ev=PageView&noscript=1"
 
     <div class="ticker-wrap">
         <div class="ticker-text">
-            🚀 User_771 withdrew ₹56,000 • ✅ User_204 withdrew ₹1,12,000 • 💸 User_909 withdrew ₹22,500 • ⚡ NO LOSS STRATEGY ACTIVE • 
+            🚀 User_771 withdrew ₹56,000 • ✅ User_204 withdrew ₹1,12,000 • 💸 User_909 withdrew ₹22,500 • ⚡ NO LOSS STRATEGY ACTIVE
         </div>
     </div>
 
-    <div class="logo-container">
-        <img src="logo.png" alt="Premium Betting Exchange">
-    </div>
+    <div class="main-container">
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Premium Betting Logo" class="main-logo">
+        </div>
 
-    <section class="main-content">
         <h1 class="hero-title">EXPONENTIAL <span class="gold-text">GROWTH</span></h1>
         <p class="sub-text">Expert Play. Managed Risk. Shared Success.</p>
 
         <div class="premium-card">
             <h3 class="card-header">PROFIT CALCULATOR (50/50)</h3>
             
-            <div class="input-group">
+            <div class="input-section">
                 <label>Investment Amount (₹)</label>
-                <input type="number" id="investAmount" class="profit-input" value="10000" oninput="updateProfit()">
+                <input type="number" id="investAmount" class="profit-input" value="10000" oninput="updateProfit()" pattern="\d*">
             </div>
 
             <div class="results-grid">
                 <div class="result-box">
-                    <span>EXPECTED RETURN</span>
+                    <span class="label">EXPECTED RETURN</span>
                     <div id="totalReturn" class="green-text">₹20,000</div>
                 </div>
-                <div class="result-box text-right">
-                    <span>YOUR 50% SHARE</span>
-                    <div id="userProfit" class="gold-text-static">₹10,000</div>
+                <div class="result-box">
+                    <span class="label">YOUR 50% SHARE</span>
+                    <div id="userProfit" class="gold-glow-text">₹10,000</div>
                 </div>
             </div>
-
-            <div class="divider"></div>
 
             <a href="https://wa.me/919549255832?text=I%20am%20ready%20to%20join" class="cta-button">
                 <i class="fab fa-whatsapp"></i> JOIN VIA WHATSAPP
             </a>
             
-            <p class="terms-text">By joining, you agree to share 50% of generated profit.</p>
+            <p class="footer-note">By joining, you agree to share 50% of generated profit.</p>
         </div>
-    </section>
+    </div>
 
     <a href="https://wa.me/919549255832?text=I%20am%20ready%20to%20join" class="floating-wa">
         <i class="fab fa-whatsapp"></i>
@@ -79,11 +77,9 @@ src="https://www.facebook.com/tr?id=889397113915456&ev=PageView&noscript=1"
             if(amount < 0) return;
             const total = amount * 2; 
             const share = total / 2;
-            
-            document.getElementById('totalReturn').innerText = '₹' + total.toLocaleString();
-            document.getElementById('userProfit').innerText = '₹' + share.toLocaleString();
+            document.getElementById('totalReturn').innerText = '₹' + total.toLocaleString('en-IN');
+            document.getElementById('userProfit').innerText = '₹' + share.toLocaleString('en-IN');
         }
     </script>
 </body>
 </html>
-
