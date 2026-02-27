@@ -1,0 +1,113 @@
+/* Premium Advanced Funnel CSS */
+:root {
+    --gold-primary: #D4AF37;
+    --gold-secondary: #FBF5B7;
+    --dark-bg: #050505;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --whatsapp-green: #25D366;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Logo Placeholder Style */
+.logo-container {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 3px solid var(--gold-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    overflow: hidden;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gold Text Effect */
+.gold-text {
+    background: linear-gradient(90deg, #BF953F, #FCF6BA, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Glass Card */
+.premium-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 550px;
+    margin: 40px auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Premium Button */
+.cta-button {
+    background: var(--whatsapp-green);
+    color: white;
+    padding: 18px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
+
+.cta-button:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* Input Styling */
+.profit-input {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 15px;
+    border-radius: 12px;
+    color: var(--gold-secondary);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Live Ticker Animation */
+.ticker-wrap {
+    width: 100%;
+    background: #111;
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+}
+
+.ticker-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+    color: #888;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
