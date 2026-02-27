@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Betting Exchange | Direct Access</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Premium Betting Exchange | Expert Profit Share</title>
+
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,46 +15,229 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
-    fbq('init', '1234567890'); // <-- Yaha apni Pixel ID Dalein
+    // Yaha 123456789 ki jagah apni Pixel ID dalo
+    fbq('init', '123456789'); 
     fbq('track', 'PageView');
     </script>
-</head>
-<body style="background-color: #0a0a0a; color: white; font-family: sans-serif; text-align: center; padding: 50px 20px;">
-
-    <div style="margin-bottom: 30px;">
-        <img src="logo.png" style="width: 200px; filter: drop-shadow(0 0 10px #D4AF37);" alt="Logo">
-    </div>
-
-    <h1 style="color: #D4AF37; font-size: 2rem;">REDIRECTING TO WHATSAPP...</h1>
-    <p style="color: #888;">Please wait while we connect you to our Expert Panel.</p>
-
-    <div class="loader" style="margin: 40px auto; border: 4px solid #333; border-top: 4px solid #25D366; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;"></div>
-
-    <button onclick="redirectToWhatsApp()" style="background-color: #25D366; color: white; border: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; font-size: 1.1rem; cursor: pointer;">
-        CLICK HERE IF NOT REDIRECTED
-    </button>
 
     <style>
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
-
-    <script>
-        const waLink = "https://wa.me/919549255832?text=I%20am%20ready%20to%20join";
-
-        function redirectToWhatsApp() {
-            // Facebook Pixel ko 'Lead' event bhej raha hai
-            fbq('track', 'Lead'); 
-            fbq('track', 'Subscribe');
-            
-            // Redirect to WhatsApp
-            window.location.href = waLink;
+        /* PREMIUM CSS SECTION */
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #fcf6ba;
+            --dark: #050505;
+            --glass: rgba(255, 255, 255, 0.05);
+            --whatsapp: #25D366;
         }
 
-        // Auto redirect after 3 seconds
-        setTimeout(() => {
-            redirectToWhatsApp();
-        }, 3000);
-    </script>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
+        body {
+            background-color: var(--dark);
+            color: #fff;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Logo Animation */
+        .logo-box {
+            margin-bottom: 25px;
+            animation: fadeInDown 1s ease;
+        }
+        .logo-box img {
+            width: 220px;
+            border-radius: 15px;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .gold-text {
+            background: linear-gradient(90deg, #BF953F, #FCF6BA, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sub-text {
+            color: #888;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        /* Premium Card */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 30px 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .input-group { margin-bottom: 25px; }
+        .input-group label { display: block; font-size: 0.7rem; color: #666; margin-bottom: 8px; }
+        
+        .profit-input {
+            width: 100%;
+            background: #000;
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            padding: 15px;
+            font-size: 1.8rem;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .results {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .res-box { text-align: center; width: 48%; }
+        .res-box span { font-size: 0.6rem; color: #888; display: block; margin-bottom: 5px; }
+        .res-val { font-size: 1.2rem; font-weight: bold; }
+
+        /* CTA Button */
+        .btn {
+            background: var(--whatsapp);
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+        .btn:active { transform: scale(0.95); }
+
+        .footer-note {
+            font-size: 0.7rem;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Ticker */
+        .ticker {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #111;
+            padding: 8px 0;
+            font-size: 0.7rem;
+            color: #666;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .ticker-move {
+            display: inline-block;
+            animation: move 20s linear infinite;
+        }
+        @keyframes move { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+    </style>
+</head>
+<body>
+
+    <div class="ticker">
+        <div class="ticker-move">
+            🔥 User_442 earned ₹98,000 • ✅ WITHDRAWAL SUCCESS • 💸 User_109 earned ₹45,500 • ⚡ EXPERT STRATEGY ACTIVE • 
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="logo-box">
+            <img src="logo.png" alt="Premium Betting">
+        </div>
+
+        <h1 class="hero-title">WE PLAY. <span class="gold-text">YOU PROFIT.</span></h1>
+        <p class="sub-text">Aapki ID aur Capital, Hamara Dimaag. <br> Profit hone par hi 50% commission.</p>
+
+        <div class="card">
+            <h3>PROFIT CALCULATOR (50/50)</h3>
+            
+            <div class="input-group">
+                <label>INVESTMENT AMOUNT (₹)</label>
+                <input type="number" id="invest" value="10000" oninput="calc()" class="profit-input">
+            </div>
+
+            <div class="results">
+                <div class="res-box">
+                    <span>EXPECTED PROFIT</span>
+                    <div id="p1" class="res-val" style="color: #25D366;">₹20,000</div>
+                </div>
+                <div class="res-box">
+                    <span>YOUR 50% SHARE</span>
+                    <div id="p2" class="res-val" style="color: var(--gold);">₹10,000</div>
+                </div>
+            </div>
+
+            <button onclick="goWhatsApp()" class="btn">
+                JOIN VIA WHATSAPP
+            </button>
+            
+            <p class="footer-note">By clicking, you agree to share 50% profit amount.</p>
+        </div>
+    </div>
+
+    <script>
+        // Profit Calculation Logic
+        function calc() {
+            let val = document.getElementById('invest').value;
+            if(val < 0) return;
+            let totalProfit = val * 2; 
+            let share = totalProfit / 2;
+            document.getElementById('p1').innerText = '₹' + totalProfit.toLocaleString('en-IN');
+            document.getElementById('p2').innerText = '₹' + share.toLocaleString('en-IN');
+        }
+
+        // Facebook Pixel + WhatsApp Redirect
+        function goWhatsApp() {
+            // Facebook Pixel Events
+            fbq('track', 'Lead');
+            fbq('track', 'Subscribe');
+
+            // Redirect with small delay for Pixel tracking
+            setTimeout(function() {
+                window.location.href = "https://wa.me/919549255832?text=I%20am%20ready%20to%20join";
+            }, 300);
+        }
+    </script>
 </body>
 </html>
