@@ -1,36 +1,136 @@
-/* Purane CSS mein niche ye add ya update karein */
-.logo-container {
+:root {
+    --gold: #D4AF37;
+    --dark-bg: #0a0a0a;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 50px auto 20px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 500px; /* Desktop par bada nahi dikhega */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Logo Fix */
+.logo-wrapper {
+    margin: 20px auto;
+    width: 200px; /* Mobile par perfect size */
 }
 
 .main-logo {
-    width: 280px; /* Logo ka size thoda bada kiya */
+    width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5)); /* Gold glow effect */
-    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
+    border-radius: 12px;
 }
 
-.main-logo:hover {
-    transform: scale(1.05);
+/* Typography */
+.hero-title {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    font-weight: 900;
 }
 
+.gold-text {
+    background: linear-gradient(90deg, #BF953F, #FCF6BA, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sub-text {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* Premium Card Fix */
 .premium-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px);
+    background: var(--glass);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(212, 175, 55, 0.2);
-    border-radius: 25px;
-    padding: 30px;
-    max-width: 450px;
-    margin: 20px auto;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    border-radius: 20px;
+    padding: 25px 15px;
+    width: 100%;
 }
 
-/* Mobile responsive fixes */
-@media (max-width: 600px) {
-    .main-logo { width: 220px; }
-    .hero-title { font-size: 2rem; }
-    .premium-card { width: 90%; padding: 20px; }
+.profit-input {
+    width: 100%;
+    background: #000;
+    border: 1px solid var(--gold);
+    color: white;
+    padding: 12px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Results Alignment */
+.results-grid {
+    display: grid;
+    grid-template-cols: 1fr 1fr;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.result-box {
+    background: rgba(0,0,0,0.3);
+    padding: 15px 5px;
+    border-radius: 10px;
+}
+
+.label { font-size: 0.65rem; color: #888; display: block; margin-bottom: 5px; }
+.green-text { color: #25D366; font-weight: bold; font-size: 1.1rem; }
+.gold-glow-text { color: var(--gold); font-weight: bold; font-size: 1.1rem; }
+
+/* Button Fix */
+.cta-button {
+    background: #25D366;
+    color: white;
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Ticker & Floating */
+.ticker-wrap { background: #111; width: 100%; overflow: hidden; padding: 8px 0; }
+.ticker-text { white-space: nowrap; animation: move 20s linear infinite; font-size: 0.8rem; color: #aaa; }
+@keyframes move { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+.floating-wa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 999;
 }
