@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Landing</title>
+
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -11,121 +15,35 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '889397113915456');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=889397113915456&ev=PageView&noscript=1"
-/></noscript>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=889397113915456&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WhatsApp Landing</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-
-body{
-background:#f0f2f5;
-display:flex;
-flex-direction:column;
-min-height:100vh;
-}
-
-.navbar{
-background:white;
-padding:15px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 1px 3px rgba(0,0,0,0.08);
-}
-
-.logo{
-font-size:22px;
-font-weight:600;
-color:#25D366;
-}
-
-.download-btn{
-background:#25D366;
-padding:10px 22px;
-border-radius:25px;
-color:white;
-border:none;
-cursor:pointer;
-}
-
-.center-box{
-flex:1;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
-
-.profile-img{
-width:110px;
-height:110px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:20px;
-}
-
-.name{
-font-size:28px;
-margin-bottom:25px;
-}
-
-.message-box{
-width:420px;
-background:#e9edef;
-padding:18px;
-border-radius:12px;
-margin-bottom:30px;
-font-size:16px;
-color:#444;
-cursor:pointer;
-}
-
-.primary-btn{
-background:#25D366;
-color:white;
-border:none;
-padding:14px 60px;
-border-radius:30px;
-font-size:16px;
-cursor:pointer;
-margin-bottom:15px;
-}
-
-.secondary-btn{
-background:white;
-border:1px solid #ccc;
-padding:14px 60px;
-border-radius:30px;
-font-size:16px;
-cursor:pointer;
-}
-
-.footer-text{
-margin-top:30px;
-font-size:14px;
-}
-
-.footer-text a{
-color:#25D366;
-text-decoration:none;
-font-weight:500;
-}
-
-@media(max-width:500px){
-.message-box{width:90%;}
-}
-
+body{background:#f0f2f5;display:flex;flex-direction:column;min-height:100vh;}
+.navbar{background:white;padding:15px 60px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 3px rgba(0,0,0,0.08);}
+.logo{font-size:22px;font-weight:600;color:#25D366;}
+.download-btn{background:#25D366;padding:10px 22px;border-radius:25px;color:white;border:none;cursor:pointer;}
+.center-box{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.profile-img{width:110px;height:110px;border-radius:50%;object-fit:cover;margin-bottom:20px;}
+.name{font-size:28px;margin-bottom:25px;}
+.message-box{width:420px;background:#e9edef;padding:18px;border-radius:12px;margin-bottom:30px;font-size:16px;color:#444;cursor:pointer;}
+.primary-btn{background:#25D366;color:white;border:none;padding:14px 60px;border-radius:30px;font-size:16px;cursor:pointer;margin-bottom:15px;}
+.secondary-btn{background:white;border:1px solid #ccc;padding:14px 60px;border-radius:30px;font-size:16px;cursor:pointer;}
+.footer-text{margin-top:30px;font-size:14px;}
+.footer-text a{color:#25D366;text-decoration:none;font-weight:500;}
+@media(max-width:500px){.message-box{width:90%;}}
 </style>
+
 </head>
 <body>
 
@@ -162,14 +80,15 @@ Download it now
 
 <script>
 function redirectWhatsApp(){
-window.location.href="https://api.whatsapp.com/send/?phone=919549255832&text=Hello%21+Can+I+get+more+info+on+this%3F&type=phone_number&app_absent=0";
+fbq('track', 'Lead');   // 🔥 Important: Lead Event Tracking
+window.location.href="https://wa.me/919549255832?text=Hello%21%20Can%20I%20get%20more%20info%20on%20this%3F";
 }
 
 function redirectWhatsAppWeb(){
-window.open("https://api.whatsapp.com/send/?phone=919549255832&text=Hello%21+Can+I+get+more+info+on+this%3F&type=phone_number&app_absent=0","_blank");
+fbq('track', 'Lead');
+window.open("https://wa.me/919549255832?text=Hello%21%20Can%20I%20get%20more%20info%20on%20this%3F","_blank");
 }
 </script>
 
 </body>
 </html>
-
