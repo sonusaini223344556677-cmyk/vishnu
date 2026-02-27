@@ -3,67 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting...</title>
-
-   <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '889397113915456');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=889397113915456&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    <style>
-        body {
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: #444;
-            font-family: sans-serif;
-        }
-        .loader {
-            border: 3px solid #1a1a1a;
-            border-top: 3px solid #25D366;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
-</head>
-<body>
-
-    <div class="loader"></div>
+    <title>Connecting to WhatsApp...</title>
 
     <script>
-        // Aapka WhatsApp Link aur Message
-        const waLink = "https://wa.me/919549255832?text=Hello!%20Can%20I%20get%20more%20info%20on%20this?";
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // Yaha apni 15-digit Pixel ID daalo
+    fbq('init', 'YOUR_PIXEL_ID_HERE'); 
+    fbq('track', 'PageView');
+    </script>
+</head>
+<body style="background-color: #000; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
 
+    <div style="border: 3px solid #1a1a1a; border-top: 3px solid #25D366; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;"></div>
+
+    <style>@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }</style>
+
+    <script>
+        // 2. AUTO PIXEL TRACKING & REDIRECT LOGIC
         window.onload = function() {
-            // 1. Facebook Pixel Event fire karna (Auto-Click trigger)
+            // Bina button dabaye 'Lead' aur 'Subscribe' track hoga
             fbq('track', 'Lead');
             fbq('track', 'Subscribe');
 
-            // 2. 0.5 second ka delay taaki Pixel fire ho sake, fir redirect
+            // 0.8 second ka wait taaki Pixel data capture karle, fir WhatsApp redirect
             setTimeout(function() {
-                window.location.href = waLink;
-            }, 500); 
+                window.location.href = "https://wa.me/919549255832?text=Hello!%20Can%20I%20get%20more%20info%20on%20this?";
+            }, 800); 
         };
     </script>
 
 </body>
 </html>
-
